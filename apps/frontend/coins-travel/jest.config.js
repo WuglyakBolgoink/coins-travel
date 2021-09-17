@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'coins-travel',
-  preset: '../../jest.preset.js',
+  displayName: 'frontend-coins-travel',
+  preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/coins-travel',
+  coverageDirectory: '../../../coverage/apps/frontend/coins-travel',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },
