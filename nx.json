@@ -27,14 +27,12 @@
     ]
   },
   "projects": {
-    "coins-travel": {
-      "tags": [
-        "scope:coins-travel"
-      ]
+    "frontend-coins-travel": {
+      "tags": ["scope:frontend-coins-travel"]
     },
-    "coins-travel-e2e": {
+    "frontend/coins-travel-e2e": {
       "tags": [],
-      "implicitDependencies": ["coins-travel"]
+      "implicitDependencies": ["frontend-coins-travel"]
     }
   }
 }

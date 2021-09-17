@@ -1,27 +1,27 @@
 {
   "version": 1,
   "projects": {
-    "coins-travel": {
+    "frontend-coins-travel": {
       "projectType": "application",
-      "root": "apps/coins-travel",
-      "sourceRoot": "apps/coins-travel/src",
+      "root": "apps/frontend/coins-travel",
+      "sourceRoot": "apps/frontend/coins-travel/src",
       "prefix": "coins-travel",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/coins-travel",
-            "index": "apps/coins-travel/src/index.html",
-            "main": "apps/coins-travel/src/main.ts",
-            "polyfills": "apps/coins-travel/src/polyfills.ts",
-            "tsConfig": "apps/coins-travel/tsconfig.app.json",
+            "outputPath": "dist/apps/frontend/coins-travel",
+            "index": "apps/frontend/coins-travel/src/index.html",
+            "main": "apps/frontend/coins-travel/src/main.ts",
+            "polyfills": "apps/frontend/coins-travel/src/polyfills.ts",
+            "tsConfig": "apps/frontend/coins-travel/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "apps/coins-travel/src/favicon.ico",
-              "apps/coins-travel/src/assets"
+              "apps/frontend/coins-travel/src/favicon.ico",
+              "apps/frontend/coins-travel/src/assets"
             ],
-            "styles": ["apps/coins-travel/src/styles.scss"],
+            "styles": ["apps/frontend/coins-travel/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -40,8 +40,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "apps/coins-travel/src/environments/environment.ts",
-                  "with": "apps/coins-travel/src/environments/environment.prod.ts"
+                  "replace": "apps/frontend/coins-travel/src/environments/environment.ts",
+                  "with": "apps/frontend/coins-travel/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "coins-travel:build:production"
+              "browserTarget": "frontend-coins-travel:build:production"
             },
             "development": {
-              "browserTarget": "coins-travel:build:development"
+              "browserTarget": "frontend-coins-travel:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,43 +72,42 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "coins-travel:build"
+            "browserTarget": "frontend-coins-travel:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/coins-travel/src/**/*.ts",
-              "apps/coins-travel/src/**/*.html"
+              "apps/frontend/coins-travel/src/**/*.ts",
+              "apps/frontend/coins-travel/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/coins-travel"],
+          "outputs": ["coverage/apps/frontend/coins-travel"],
           "options": {
-            "jestConfig": "apps/coins-travel/jest.config.js",
+            "jestConfig": "apps/frontend/coins-travel/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "coins-travel-e2e": {
-      "root": "apps/coins-travel-e2e",
-      "sourceRoot": "apps/coins-travel-e2e/src",
+    "frontend/coins-travel-e2e": {
+      "root": "apps/frontend/coins-travel-e2e",
+      "sourceRoot": "apps/frontend/coins-travel-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/coins-travel-e2e/cypress.json",
-            "devServerTarget": "coins-travel:serve:development",
-            "tsConfig": "apps/coins-travel-e2e/tsconfig.json"
+            "cypressConfig": "apps/frontend/coins-travel-e2e/cypress.json",
+            "devServerTarget": "frontend-coins-travel:serve:development"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "coins-travel:serve:production"
+              "devServerTarget": "frontend-coins-travel:serve:production"
             }
           }
         },
@@ -116,7 +115,7 @@
           "builder": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["apps/coins-travel-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/frontend/coins-travel-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -153,5 +152,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "coins-travel"
+  "defaultProject": "frontend-coins-travel"
 }
