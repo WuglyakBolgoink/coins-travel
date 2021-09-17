@@ -28,7 +28,9 @@
   },
   "projects": {
     "coins-travel": {
-      "tags": []
+      "tags": [
+        "scope:coins-travel"
+      ]
     },
     "coins-travel-e2e": {
       "tags": [],
