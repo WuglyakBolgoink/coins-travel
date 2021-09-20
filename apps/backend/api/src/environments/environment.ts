@@ -14,7 +14,8 @@ export const environment: IEnvironment = {
 
     dropSchema: false,
     synchronize: true,
-    logging: false
+    logging: true,
+    logNotifications: true
   }
 };
 
@@ -33,4 +34,5 @@ export interface IEnvironmentConnection {
   dropSchema: boolean;
   synchronize: boolean;
   logging: boolean;
+  logNotifications: boolean;
 }

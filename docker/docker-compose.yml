@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   postgres:
+    container_name: pg_container
     image: postgres:13-alpine
     hostname: ${DB_HOSTNAME}
     ports:
@@ -17,6 +18,7 @@ services:
     restart: unless-stopped
 
   pgadmin:
+    container_name: pgadmin4_container
     image: dpage/pgadmin4
     depends_on:
       - postgres
